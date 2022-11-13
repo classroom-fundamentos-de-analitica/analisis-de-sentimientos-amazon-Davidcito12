@@ -60,15 +60,14 @@ def pregunta_03():
     Construcción de un analizador de palabras
     -------------------------------------------------------------------------------------
     """
-    # Importe el stemmer de Porter
-    # Importe CountVectorizer
-    from ____ import ____
+    from nltk.stem.porter import PorterStemmer as Stemmer
+    from sklearn.feature_extraction.text import CountVectorizer as Vectorizer
 
     # Cree un stemeer que use el algoritmo de Porter.
-    stemmer = ____
+    stemmer = Stemmer()
 
     # Cree una instancia del analizador de palabras (build_analyzer)
-    analyzer = ____().____()
+    analyzer = Vectorizer().build_analyzer()
 
     # Retorne el analizador de palabras
     return lambda x: (stemmer.stem(w) for w in analyzer(x))
