@@ -113,14 +113,14 @@ def pregunta_04():
         steps=[
             ("Vectorizer", countVectorizer),
             ("Bernoulli", Bernoulli()),
-        ],
+        ]
     )
 
     # Defina un diccionario de parámetros para el GridSearchCV. Se deben
     # considerar 10 valores entre 0.1 y 1.0 para el parámetro alpha de
     # BernoulliNB.
     param_grid = {
-        "Bernoulli_alpha": np.linspace(0.1, 1, 10),
+        "Bernoulli__alpha": np.linspace(0.1, 1, 10),
     }
 
     # Defina una instancia de GridSearchCV con el pipeline y el diccionario de
